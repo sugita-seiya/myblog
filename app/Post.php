@@ -8,4 +8,9 @@ class Post extends Model
 {
     //
     protected $fillable = ['title', 'boby'];
+
+    //commentとのアソシエーション
+    public function comments() {
+        return $this->hasMany('App\Comment');
+    }
 }
